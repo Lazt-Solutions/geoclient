@@ -32,5 +32,5 @@
 ## 📬 Contact
 
 Developed by [**Bryan Lazo**](https://github.com/blazo-dev)  
-GitHub: [**geoclient-app**](https://github.com/Lazt-Solutions/geoclient-app)  
+GitHub: [**Geoclient**](https://github.com/Lazt-Solutions/geoclient)  
 Want to join the beta? **[Sign up here](https://meet-geoclient.pages.dev)** and get early access!
