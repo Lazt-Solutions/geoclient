@@ -1,11 +1,12 @@
 "use client"
-import { ActionVariant, cn, geoActionBase } from "@/lib/utils";
+import { ActionSizes, ActionTypes, ActionVariant, cn, geoActionBase } from "@/lib/utils";
 
 type Props = {
-    type?: "button" | "submit" | "reset";
+    type?: ActionTypes;
+    hidden?: boolean;
     children: React.ReactNode;
     variant?: ActionVariant;
-    size?: "sm" | "md" | "lg";
+    size?: ActionSizes;
     className?: string;
     onClick?: () => void;
     disabled?: boolean;
@@ -13,6 +14,7 @@ type Props = {
 
 export function GeoButton({
     type = "button",
+    hidden = false,
     children,
     variant,
     size,
@@ -22,6 +24,7 @@ export function GeoButton({
 }: Props) {
     return (
         <button
+            hidden={hidden}
             type={type}
             onClick={onClick}
             disabled={disabled}

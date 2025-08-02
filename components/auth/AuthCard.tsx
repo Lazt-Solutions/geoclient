@@ -1,6 +1,6 @@
 "use client"
-import { GeoButton } from '@/components/ui/geo-button'
-import { GeoTextLink } from '@/components/ui/geo-text-link'
+import { GeoButton } from '@/components/ui/GeoButton'
+import { GeoTextLink } from '@/components/ui/GeoTextLink'
 import { supabaseBrowser } from '@/lib/supabase/browser'
 import {
     IconBrandGithubFilled,

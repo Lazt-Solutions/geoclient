@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import QueryProvider from "@/components/QueryProvider";
+import Sidebar from "@/components/Sidebar";
 
 const interSans = Inter({
   variable: "--font-geist-sans",
@@ -26,17 +28,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${interSans.variable} ${robotoMono.variable} min-h-screen flex items-center justify-center antialiased px-8`}
+        className={`${interSans.variable} ${robotoMono.variable} min-h-screen grid content-center antialiased`}
         suppressHydrationWarning
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <QueryProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Sidebar />
+            <main className="w-container flex justify-center mx-auto">
+              {children}
+            </main>
+          </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   );

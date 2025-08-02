@@ -1,9 +1,9 @@
 "use client"
 
-import { IconLogout2, IconSettings } from '@tabler/icons-react'
-import { GeoButton } from './geo-button'
 import { supabaseBrowser } from '@/lib/supabase/browser';
+import { IconLogout2, IconSettings } from '@tabler/icons-react';
 import { redirect } from 'next/navigation';
+import { GeoButton } from './GeoButton';
 
 function FeatureInProgress() {
     const signOut = async () => {

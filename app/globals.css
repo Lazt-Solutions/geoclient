@@ -43,6 +43,11 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+@utility w-container {
+  width: min(100% - 4rem, 1152px);
+  ;
+}
+
 :root {
   --radius: 0.65rem;
   --background: oklch(0.965 0.002 250);
