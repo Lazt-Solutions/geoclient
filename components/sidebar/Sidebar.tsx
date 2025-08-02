@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { IconMenu, IconX } from '@tabler/icons-react'
+import { IconMenu2, IconX } from '@tabler/icons-react'
 import { useCallback, useEffect, useState } from 'react'
 import { GeoButton } from '../ui/GeoButton'
 import SidebarFooter from './SidebarFooter'
@@ -41,7 +41,7 @@ export default function Sidebar() {
                 {isSidebarOpen ? (
                     <IconX className="w-4 h-4 text-primary-foreground" />
                 ) : (
-                    <IconMenu className="w-4 h-4 text-primary-foreground" />
+                    <IconMenu2 className="w-4 h-4 text-primary-foreground" />
                 )}
             </GeoButton>
 
@@ -58,7 +58,7 @@ export default function Sidebar() {
             {/* Sidebar */}
             <nav
                 className={cn(
-                    'fixed top-0 left-0 z-40 w-full md:w-75 flex flex-col h-screen bg-card border-r border-muted shadow-sm transform transition-transform duration-300 lg:translate-x-0',
+                    'fixed top-0 left-0 z-40 w-full md:w-75 flex flex-col h-screen bg-card border-r border-muted transform transition-transform duration-300 lg:translate-x-0',
                     isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
                 )}
                 role="navigation"

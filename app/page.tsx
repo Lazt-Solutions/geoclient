@@ -3,7 +3,7 @@ import FeatureInProgress from '@/components/ui/FeatureInProgress'
 
 export default function page() {
   return (
-    <section className="mb-12">
+    <section className="w-full max-w-md">
       <FeatureInProgress />
     </section>
   )
