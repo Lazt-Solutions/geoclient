@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import { ActionVariant, cn, geoActionBase } from "@/lib/utils";
 import { MouseEvent } from "react";

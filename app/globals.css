@@ -45,7 +45,6 @@
 
 @utility w-container {
   width: min(100% - 4rem, 1152px);
-  ;
 }
 
 :root {

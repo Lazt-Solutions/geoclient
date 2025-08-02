@@ -1,9 +1,9 @@
+import QueryProvider from "@/components/QueryProvider";
+import Sidebar from "@/components/sidebar/Sidebar";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import QueryProvider from "@/components/QueryProvider";
-import Sidebar from "@/components/Sidebar";
 
 const interSans = Inter({
   variable: "--font-geist-sans",

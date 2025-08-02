@@ -44,8 +44,8 @@ export const geoActionBase = cva(
             variant: geoActionVariants,
             size: {
                 sm: "px-4 py-2 text-sm",
-                md: "px-5 py-2.5 text-base",
-                lg: "px-6 py-3 text-base",
+                md: "px-4 py-3 text-base",
+                lg: "px-4 py-4 text-lg",
                 "icon-sm": "w-8 h-8 rounded-md",
                 "icon-md": "w-12 h-12 rounded-lg",
                 "icon-lg": "w-14 h-14 rounded-xl",
