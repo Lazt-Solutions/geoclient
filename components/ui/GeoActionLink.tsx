@@ -1,14 +1,14 @@
 "use client"
 
 import Link from "next/link";
-import { ActionVariant, cn, geoActionBase } from "@/lib/utils";
+import { ActionSizes, ActionVariant, cn, geoActionBase } from "@/lib/utils";
 import { MouseEvent } from "react";
 
 type Props = {
     href: string;
     children: React.ReactNode;
     variant?: ActionVariant;
-    size?: "sm" | "md" | "lg";
+    size?: ActionSizes;
     className?: string;
     onClick?: (e: MouseEvent<HTMLAnchorElement>) => void
 };

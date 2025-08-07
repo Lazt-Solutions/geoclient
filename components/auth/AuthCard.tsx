@@ -11,19 +11,15 @@ type AuthProvider = "github" | "google"
 
 export function AuthCard() {
     const handleLoginWithOAuth = async (provider: AuthProvider) => {
-        console.log({ provider });
 
         const supabase = supabaseBrowser();
 
-        const { data, error } = await supabase.auth.signInWithOAuth({
+        await supabase.auth.signInWithOAuth({
             provider,
             options: {
                 redirectTo: `${location.origin}/auth/callback`
             }
         })
-
-        console.log({ data, error });
-
     }
 
     return (
@@ -40,12 +36,12 @@ export function AuthCard() {
             <div className="grid gap-4">
                 <GeoButton onClick={() => handleLoginWithOAuth("google")} variant="primary" className="w-full" size="lg">
                     <IconBrandGoogleFilled className="w-5 h-5" />
-                    <span className="text-base font-medium">Sign in with Google</span>
+                    <span className="text-sm md:text-base font-medium">Sign in with Google</span>
                 </GeoButton>
 
                 <GeoButton onClick={() => handleLoginWithOAuth("github")} variant="secondary" className="w-full" size="lg">
                     <IconBrandGithubFilled className="w-5 h-5" />
-                    <span className="text-base font-medium">Sign in with GitHub</span>
+                    <span className="text-sm md:text-base font-medium">Sign in with GitHub</span>
                 </GeoButton>
             </div>
 

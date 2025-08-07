@@ -19,7 +19,7 @@ export default function SidebarHeader({ onClose }: Props) {
                 variant="ghost"
                 size="icon-md"
                 onClick={onClose}
-                className="lg:hidden border border-muted"
+                className="lg:hidden border border-muted shrink-0"
                 aria-label="Close navigation menu"
             >
                 <IconX className="w-4 h-4" />

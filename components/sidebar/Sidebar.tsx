@@ -35,7 +35,7 @@ export default function Sidebar() {
                 aria-label="Toggle navigation menu"
                 aria-expanded={isSidebarOpen}
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="bg-card border border-muted shadow-md"
+                className="border-2 border-muted shadow-md"
             >
                 {isSidebarOpen ? (
                     <IconX className="w-4 h-4 text-primary-foreground" />

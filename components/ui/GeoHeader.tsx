@@ -10,6 +10,7 @@ export function GeoHeader() {
             <div className="w-container flex items-center justify-between gap-4">
                 <GeoActionLink
                     variant='ghost'
+                    size='icon-md'
                     href="/"
                 >
                     <GeoLogo className="fill-primary text-gray-100 w-8 h-8" />
