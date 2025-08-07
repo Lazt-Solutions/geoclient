@@ -5,10 +5,12 @@ import { AuthHeader } from '@/components/auth/AuthHeader'
 
 function page() {
     return (
-        <section className="w-full max-w-md grid gap-10">
-            <AuthHeader />
-            <AuthCard />
-            <AuthFooter />
+        <section className="col-span-full py-10">
+            <div className="grid gap-4 w-container">
+                <AuthHeader />
+                <AuthCard />
+                <AuthFooter />
+            </div>
         </section >
     )
 }

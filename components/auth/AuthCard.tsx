@@ -27,7 +27,7 @@ export function AuthCard() {
     }
 
     return (
-        <section className="border-2 rounded-2xl shadow-lg p-8 grid gap-10">
+        <section className="max-w-md w-full mx-auto border-2 rounded-2xl shadow-lg p-8 grid gap-10">
             {/* Welcome */}
             <div className="text-center grid gap-4">
                 <h2 className="text-2xl font-semibold">Welcome back</h2>

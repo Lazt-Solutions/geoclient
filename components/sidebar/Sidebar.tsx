@@ -13,7 +13,7 @@ export default function Sidebar() {
 
     const handleGlobalEvents = useCallback((e: KeyboardEvent | UIEvent) => {
         if (e instanceof KeyboardEvent && e.key === 'Escape') setIsSidebarOpen(false)
-        if (e instanceof UIEvent && window.innerWidth >= 1024) setIsSidebarOpen(false)
+        // if (e instanceof UIEvent && window.innerWidth >= 1024) setIsSidebarOpen(false)
     }, [])
 
     useEffect(() => {
@@ -33,10 +33,9 @@ export default function Sidebar() {
                 variant="ghost"
                 size="icon-md"
                 aria-label="Toggle navigation menu"
-                hidden={isSidebarOpen}
                 aria-expanded={isSidebarOpen}
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="fixed top-4 right-4 z-50 lg:hidden bg-card border border-muted shadow-md"
+                className="bg-card border border-muted shadow-md"
             >
                 {isSidebarOpen ? (
                     <IconX className="w-4 h-4 text-primary-foreground" />
@@ -48,9 +47,10 @@ export default function Sidebar() {
             {/* Mobile Overlay */}
             <div
                 className={cn(
-                    'fixed inset-0 z-30 bg-card/60 transition-opacity duration-300 lg:hidden',
+                    'fixed inset-0 z-30 bg-card/60 transition-opacity duration-300',
                     isSidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
                 )}
+                hidden={!isSidebarOpen}
                 onClick={() => setIsSidebarOpen(false)}
                 aria-hidden={!isSidebarOpen}
             />
@@ -58,7 +58,7 @@ export default function Sidebar() {
             {/* Sidebar */}
             <nav
                 className={cn(
-                    'fixed top-0 left-0 z-40 w-full md:w-75 flex flex-col h-screen bg-card border-r border-muted transform transition-transform duration-300 lg:translate-x-0',
+                    'fixed top-0 left-0 z-40 w-full md:w-75 lg:w-90 flex flex-col h-screen bg-card border-r border-muted transform transition-transform duration-300',
                     isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
                 )}
                 role="navigation"
