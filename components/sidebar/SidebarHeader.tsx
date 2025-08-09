@@ -12,7 +12,7 @@ export default function SidebarHeader({ onClose }: Props) {
     return (
         <div className="flex items-center justify-between px-4 py-2 border-b border-muted">
             <h1 className="w-full text-xl font-bold flex gap-4 items-center justify-center">
-                <GeoLogo className="fill-primary text-gray-100 w-8 h-8" />
+                <GeoLogo className="fill-primary text-primary-foreground w-8 h-8" />
                 GeoClient
             </h1>
             <GeoButton

@@ -32,7 +32,7 @@ export default function SidebarNavItem({
                     active && 'bg-primary hover:bg-primary/90'
                 )}
                 onClick={() => {
-                    if (window.innerWidth < 1024) onClick?.()
+                    if (typeof window !== 'undefined' && window.innerWidth < 1024) onClick?.()
                 }}
             >
                 <div className="flex gap-4 items-center flex-1">

@@ -23,11 +23,15 @@ const fetchProfile = async () => {
     }
 
     if (user) {
-        const { data: profile } = await supabase
+        const { data: profile, error: profileError } = await supabase
             .from("profiles")
             .select("*")
             .eq("id", user.id)
             .single();
+            
+        if (profileError) {
+            throw new Error(profileError.message);
+        }
 
         return profile;
     }

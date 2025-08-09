@@ -2,15 +2,15 @@
 
 import { supabaseBrowser } from '@/lib/supabase/browser';
 import { IconLogout2, IconSettings } from '@tabler/icons-react';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { GeoButton } from './GeoButton';
 
 function FeatureInProgress() {
+    const router = useRouter();
     const signOut = async () => {
         const supabase = supabaseBrowser();
         await supabase.auth.signOut()
-
-        redirect("/auth")
+        router.push("/auth")
     }
 
     return (

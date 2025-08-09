@@ -16,7 +16,7 @@ export default function NotFoundPage() {
         <section className="w-full max-w-md grid gap-10 text-center">
             <div>
                 <h1 className="w-full text-3xl font-bold flex gap-4 items-center justify-center">
-                    <GeoLogo className="fill-primary text-gray-100 w-8 h-8" />
+                    <GeoLogo className="fill-primary text-primary-foreground w-8 h-8" />
                     GeoClient
                 </h1>
             </div>
