@@ -3,7 +3,7 @@ import { AuthFooter } from '@/components/auth/AuthFooter'
 import { AuthHeader } from '@/components/auth/AuthHeader'
 
 
-function page() {
+function AuthPage() {
     return (
         <>
             <AuthHeader />
@@ -13,4 +13,4 @@ function page() {
     )
 }
 
-export default page
+export default AuthPage

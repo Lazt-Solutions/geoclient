@@ -11,7 +11,7 @@ export function GeoHeader() {
                 <GeoActionLink
                     variant='ghost'
                     size='icon-md'
-                    href="/"
+                    href="/dashboard"
                 >
                     <GeoLogo className="fill-primary text-primary-foreground w-8 h-8" />
                 </GeoActionLink>

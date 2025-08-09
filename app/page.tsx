@@ -1,8 +1,5 @@
-"use client"
-import FeatureInProgress from '@/components/ui/FeatureInProgress'
+import { redirect } from "next/navigation"
 
-export default function page() {
-  return (
-    <FeatureInProgress />
-  )
+export default function HomePage() {
+  redirect("/dashboard")
 }

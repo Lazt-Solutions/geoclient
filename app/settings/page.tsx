@@ -5,7 +5,7 @@ import AccountInformation from "@/components/settings/AccountInformation";
 import { useProfile } from "@/hooks/useProfile"
 
 
-function Settings() {
+function SettingsPage() {
     const { isLoading, data: profile, isError } = useProfile();
 
     return (
@@ -19,4 +19,4 @@ function Settings() {
     )
 }
 
-export default Settings
+export default SettingsPage

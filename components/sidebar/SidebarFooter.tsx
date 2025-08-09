@@ -13,7 +13,10 @@ export default function SidebarFooter() {
         <div className="border-t border-muted p-4 flex items-center space-x-3">
             <div className="relative w-8 h-8">
                 <Image
-                    src={profile?.image_url || "https://placehold.co/96x96"}
+                    src={
+                        profile?.image_url ||
+                        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%23e5e7eb'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='16' fill='%239ca3af'%3E96x96%3C/text%3E%3C/svg%3E"
+                    }
                     alt="Profile photo"
                     width={96}
                     height={96}

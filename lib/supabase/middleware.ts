@@ -15,7 +15,7 @@ export async function updateSession(request: NextRequest) {
                     return request.cookies.getAll();
                 },
                 setAll(cookiesToSet) {
-                    cookiesToSet.forEach(({ name, value, options }) =>
+                    cookiesToSet.forEach(({ name, value }) =>
                         request.cookies.set(name, value)
                     );
                     supabaseResponse = NextResponse.next({
@@ -38,7 +38,7 @@ export async function updateSession(request: NextRequest) {
 
     const user = data?.claims;
 
-    const publicPaths = ["/login", "/auth"];
+    const publicPaths = ["/auth"];
 
     const isPublicPath = publicPaths.some((path) =>
         request.nextUrl.pathname.startsWith(path)
@@ -48,6 +48,13 @@ export async function updateSession(request: NextRequest) {
         // no user, potentially respond by redirecting the user to the login page
         const url = request.nextUrl.clone();
         url.pathname = "/auth";
+        return NextResponse.redirect(url);
+    }
+
+    // Restrict authenticated users from accessing /auth
+    if (user && request.nextUrl.pathname.startsWith("/auth")) {
+        const url = request.nextUrl.clone();
+        url.pathname = "/dashboard";
         return NextResponse.redirect(url);
     }
 

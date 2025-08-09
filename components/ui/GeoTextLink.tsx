@@ -22,6 +22,8 @@ export function GeoTextLink({ href, children, external = false, className }: Pro
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(baseClasses, className)}
+                aria-label={typeof children === 'string' ? `${children} (opens in a new tab)` : 'Opens in a new tab'}
+                title={typeof children === 'string' ? `${children} (opens in a new tab)` : 'Opens in a new tab'}
             >
                 {children}
                 <span aria-hidden="true">↗</span>

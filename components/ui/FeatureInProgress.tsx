@@ -4,13 +4,18 @@ import { supabaseBrowser } from '@/lib/supabase/browser';
 import { IconLogout2, IconSettings } from '@tabler/icons-react';
 import { useRouter } from 'next/navigation';
 import { GeoButton } from './GeoButton';
+import { useQueryClient } from '@tanstack/react-query';
 
 function FeatureInProgress() {
     const router = useRouter();
+    const queryClient = useQueryClient()
+
+        ;
     const signOut = async () => {
         const supabase = supabaseBrowser();
-        await supabase.auth.signOut()
-        router.push("/auth")
+        await supabase.auth.signOut();
+        queryClient.clear();
+        router.push("/auth");
     }
 
     return (
