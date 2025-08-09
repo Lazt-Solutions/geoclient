@@ -1,17 +1,18 @@
 import QueryProvider from "@/components/QueryProvider";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { GeoHeader } from "@/components/ui/GeoHeader";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import { GeoHeader } from "@/components/ui/GeoHeader";
 
 const interSans = Inter({
-  variable: "--font-geist-sans",
+  variable: "--font-inter-sans",
   subsets: ["latin"],
 });
 
 const robotoMono = Roboto_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
 
@@ -28,7 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${interSans.variable} ${robotoMono.variable} min-h-screen grid content-start antialiased`}
+        className={cn(
+          interSans.variable,
+          robotoMono.variable,
+          "min-h-screen grid content-start antialiased"
+        )}
         suppressHydrationWarning
       >
         <QueryProvider>

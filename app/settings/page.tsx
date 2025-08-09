@@ -9,7 +9,7 @@ function Settings() {
     const { isLoading, data: profile, isError } = useProfile();
 
     return (
-        <PageState isLoading={isLoading} isError={isError}>
+        <PageState isLoading={isLoading} isError={isError || !profile} errorMessage="Failed to load profile">
             <section className="col-span-full py-10">
                 <div className="grid gap-10 w-container">
                     <div className="space-y-4">

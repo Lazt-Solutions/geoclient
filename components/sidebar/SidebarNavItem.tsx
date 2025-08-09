@@ -1,8 +1,6 @@
 
 'use client'
 
-const LG_BREAKPOINT = 1024 // Tailwind's lg breakpoint
-
 import { cn } from '@/lib/utils'
 import { Icon } from '@tabler/icons-react'
 import { GeoActionLink } from '../ui/GeoActionLink'
@@ -34,9 +32,7 @@ export default function SidebarNavItem({
                     'w-full',
                     active && 'bg-primary hover:bg-primary/90'
                 )}
-                onClick={() => {
-                    if (typeof window !== 'undefined' && window.innerWidth < LG_BREAKPOINT) onClick?.()
-                }}
+                onClick={onClick}
             >
                 <div className="flex gap-4 items-center flex-1">
                     <Icon className="w-5 h-5" />
