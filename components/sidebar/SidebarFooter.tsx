@@ -11,7 +11,9 @@ export default function SidebarFooter() {
                 <Image
                     src="https://avatars.githubusercontent.com/u/132369592?v=4"
                     alt="Profile photo"
-                    fill
+                    width={96}
+                    height={96}
+                    sizes="(24rem) 96px, (48rem) 96px, 96px"
                     className="object-cover rounded-full"
                 />
             </div>

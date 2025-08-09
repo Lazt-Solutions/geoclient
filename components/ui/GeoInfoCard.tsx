@@ -6,7 +6,7 @@ interface GeoCardProps {
     children: ReactNode
 }
 
-export function GeoCard({ title, description, children }: GeoCardProps) {
+function GeoInfoCard({ title, description, children }: GeoCardProps) {
     return (
         <article className="rounded-xl shadow-sm border border-muted text-card-foreground overflow-hidden">
             {/* Header */}
@@ -22,3 +22,5 @@ export function GeoCard({ title, description, children }: GeoCardProps) {
         </article>
     )
 }
+
+export default GeoInfoCard;

@@ -1,6 +1,4 @@
-import React from 'react'
-
-function GeoInfoItem({
+function SettingsInfoItem({
     label,
     icon,
     value,
@@ -10,7 +8,7 @@ function GeoInfoItem({
     value: string
 }) {
     return (
-        <div className='space-y-1'>
+        <div className='space-y-1x'>
             <label className="block text-sm font-medium text-muted-foreground">{label}</label>
             <div className="flex items-center gap-2 p-3 bg-card rounded-lg border border-muted text-muted-foreground">
                 {icon}
@@ -21,4 +19,4 @@ function GeoInfoItem({
 
 }
 
-export default GeoInfoItem
+export default SettingsInfoItem
