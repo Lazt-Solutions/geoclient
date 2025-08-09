@@ -1,9 +1,9 @@
 
 'use client'
 
-import { cn } from '@/lib/utils'
 import { Icon } from '@tabler/icons-react'
 import { GeoActionLink } from '../ui/GeoActionLink'
+import { cn } from '@/lib/utils/cn'
 
 type Props = {
     href: string

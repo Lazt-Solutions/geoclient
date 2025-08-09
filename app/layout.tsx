@@ -1,10 +1,10 @@
 import QueryProvider from "@/components/QueryProvider";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { GeoHeader } from "@/components/ui/GeoHeader";
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils/cn";
 
 const interSans = Inter({
   variable: "--font-inter-sans",

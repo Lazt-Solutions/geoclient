@@ -1,5 +1,8 @@
 "use client"
-import { ActionSizes, ActionTypes, ActionVariant, cn, geoActionBase } from "@/lib/utils";
+
+import { ActionSizes, ActionTypes, ActionVariant } from "@/lib/types/action.types";
+import { cn } from "@/lib/utils/cn";
+import { geoActionBase } from "@/lib/utils/geoActionBase";
 
 type Props = {
     type?: ActionTypes;

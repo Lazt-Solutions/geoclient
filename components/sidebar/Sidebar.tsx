@@ -1,12 +1,12 @@
 'use client'
 
-import { cn } from '@/lib/utils'
 import { IconMenu2, IconX } from '@tabler/icons-react'
 import { useCallback, useEffect, useState } from 'react'
 import { GeoButton } from '../ui/GeoButton'
 import SidebarFooter from './SidebarFooter'
 import SidebarHeader from './SidebarHeader'
 import SidebarNavList from './SidebarNavList'
+import { cn } from '@/lib/utils/cn'
 
 export default function Sidebar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)

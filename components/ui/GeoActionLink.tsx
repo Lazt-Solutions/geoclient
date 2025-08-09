@@ -1,7 +1,9 @@
 "use client"
 
+import { ActionSizes, ActionVariant } from "@/lib/types/action.types";
+import { cn } from "@/lib/utils/cn";
+import { geoActionBase } from "@/lib/utils/geoActionBase";
 import Link from "next/link";
-import { ActionSizes, ActionVariant, cn, geoActionBase } from "@/lib/utils";
 import { MouseEvent } from "react";
 
 type Props = {

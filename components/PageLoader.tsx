@@ -1,4 +1,4 @@
-import { IconLoader } from '@tabler/icons-react'
+import GeoElementLoader from './ui/GeoElementLoader'
 
 type Props = {
     message?: string
@@ -8,9 +8,7 @@ function PageLoader({ message = "Please wait while we fetch the data..." }: Prop
     return (
         <section className="col-span-full py-10">
             <div className="grid gap-6 w-container text-center">
-                <div className="flex justify-center w-full">
-                    <IconLoader className="animate-spin w-10 h-10 text-primary" />
-                </div>
+                <GeoElementLoader />
 
                 <div className="space-y-4">
                     <h3 className="text-lg font-medium">Loading your data...</h3>

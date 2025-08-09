@@ -1,10 +1,9 @@
 import { supabaseBrowser } from "@/lib/supabase/browser";
-import { Profile } from "@/types/profile";
+import { Profile } from "@/types/profile.types";
 import { useQuery } from "@tanstack/react-query";
 
 const fetchProfile = async () => {
     const supabase = supabaseBrowser();
-
     const {
         data: { user },
         error,
@@ -14,22 +13,20 @@ const fetchProfile = async () => {
         throw new Error(error.message);
     }
 
-    if (user) {
-        const { data: profile, error: profileError } = await supabase
-            .from("profiles")
-            .select("*")
-            .eq("id", user.id)
-            .single();
+    // Return immediately if no user is authenticated
+    if (!user) return null;
 
-        if (profileError) {
-            throw new Error(profileError.message);
-        }
+    const { data: profile, error: profileError } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single();
 
-        return profile as Profile;
+    if (profileError) {
+        throw new Error(profileError.message);
     }
 
-    // No user authenticated, return null to indicate absence of profile data
-    return null;
+    return profile as Profile;
 };
 
 export const useProfile = () => {

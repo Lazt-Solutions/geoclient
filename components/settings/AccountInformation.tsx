@@ -1,4 +1,4 @@
-import { Profile } from '@/types/profile'
+import { Profile } from '@/types/profile.types'
 import { IconCalendarFilled, IconIdBadge2, IconMailFilled, IconUserFilled } from '@tabler/icons-react'
 import Image from 'next/image'
 import GeoInfoCard from '../ui/GeoInfoCard'

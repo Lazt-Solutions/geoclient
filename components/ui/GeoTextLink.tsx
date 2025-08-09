@@ -1,7 +1,7 @@
 'use client';
 
+import { cn } from "@/lib/utils/cn";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 type Props = {
     href: string;

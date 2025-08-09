@@ -1,23 +1,8 @@
 "use client"
 
-import { supabaseBrowser } from '@/lib/supabase/browser';
-import { IconLogout2, IconSettings } from '@tabler/icons-react';
-import { useRouter } from 'next/navigation';
-import { GeoButton } from './GeoButton';
-import { useQueryClient } from '@tanstack/react-query';
+import { IconSettings } from '@tabler/icons-react';
 
 function FeatureInProgress() {
-    const router = useRouter();
-    const queryClient = useQueryClient()
-
-        ;
-    const signOut = async () => {
-        const supabase = supabaseBrowser();
-        await supabase.auth.signOut();
-        queryClient.clear();
-        router.push("/auth");
-    }
-
     return (
         <section className="col-span-full py-10">
             <div className="grid gap-6 place-items-center text-center w-container">
@@ -39,10 +24,6 @@ function FeatureInProgress() {
                     <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse" />
                     In Development
                 </div>
-                <GeoButton variant='destructive' onClick={signOut}>
-                    <IconLogout2 />
-                    Logout
-                </GeoButton>
             </div>
         </section>
     )

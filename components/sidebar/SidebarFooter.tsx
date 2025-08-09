@@ -1,12 +1,30 @@
 'use client'
 
-import { IconDotsVertical } from '@tabler/icons-react'
-import Image from 'next/image'
-import { GeoButton } from '../ui/GeoButton'
 import { useProfile } from '@/hooks/useProfile';
+import { supabaseBrowser } from '@/lib/supabase/browser';
+import { Profile } from '@/types/profile.types';
+import { IconLogout2 } from '@tabler/icons-react';
+import { useQueryClient } from '@tanstack/react-query';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { GeoButton } from '../ui/GeoButton';
+import GeoElementLoader from '../ui/GeoElementLoader';
 
 export default function SidebarFooter() {
-    const { data: profile } = useProfile();
+    const { data: profile, isLoading } = useProfile() as { data: Profile | null, isLoading: boolean };
+    const router = useRouter();
+    const queryClient = useQueryClient();
+
+
+    if (!profile) return null;
+    if (isLoading) return (<GeoElementLoader />);
+
+    const signOut = async () => {
+        const supabase = supabaseBrowser();
+        await supabase.auth.signOut();
+        queryClient.clear();
+        router.refresh();
+    }
 
 
     return (
@@ -29,11 +47,12 @@ export default function SidebarFooter() {
                 <p className="text-xs text-muted-foreground truncate">{profile?.email || 'N/A'}</p>
             </div>
             <GeoButton
-                variant="ghost"
+                variant="destructive"
                 size="icon-sm"
                 aria-label="User menu"
+                onClick={signOut}
             >
-                <IconDotsVertical className="w-4 h-4" />
+                <IconLogout2 className="w-5 h-5" />
             </GeoButton>
         </div>
     )

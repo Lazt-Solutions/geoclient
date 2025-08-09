@@ -2,10 +2,8 @@
 
 import {
     IconCalendar,
-    IconChartArcs,
     IconCompassFilled,
     IconLocation,
-    IconReport,
     IconRoute,
     IconSettings,
     IconUsers
@@ -19,8 +17,6 @@ const navItems = [
     { href: '/visits', label: 'Visits', icon: IconCalendar },
     { href: '/routes', label: 'Routes', icon: IconRoute },
     { href: '/map', label: 'Map View', icon: IconLocation },
-    { href: '/reports', label: 'Reports', icon: IconReport },
-    { href: '/analytics', label: 'Analytics', icon: IconChartArcs },
     { href: '/settings', label: 'Settings', icon: IconSettings },
 ]
 
