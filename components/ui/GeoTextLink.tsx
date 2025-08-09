@@ -24,7 +24,7 @@ export function GeoTextLink({ href, children, external = false, className }: Pro
                 className={cn(baseClasses, className)}
             >
                 {children}
-                <span aria-hidden>↗</span>
+                <span aria-hidden="true">↗</span>
             </a>
         );
     }
