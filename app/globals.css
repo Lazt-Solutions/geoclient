@@ -43,20 +43,6 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-@utility w-container {
-  width: min(100% - 4rem, 1152px);
-  margin: 0 auto;
-}
-
-@utility g-container {
-  display: grid;
-  grid-template-columns: 1fr min(100% - 4rem, 1152px) 1fr;
-
-  &>* {
-    grid-column: 2/3;
-  }
-}
-
 :root {
   --radius: 0.65rem;
   --background: oklch(0.965 0.002 250);
@@ -127,7 +113,19 @@
 }
 
 
+@utility w-container {
+  width: min(100% - 4rem, 1152px);
+  margin: 0 auto;
+}
 
+@utility g-container {
+  display: grid;
+  grid-template-columns: 1fr min(100% - 4rem, 1152px) 1fr;
+
+  &>* {
+    grid-column: 2/3;
+  }
+}
 
 @layer base {
   * {

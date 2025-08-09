@@ -43,9 +43,13 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <main className="g-container">
+            <main className="g-container grid-rows-[auto_1fr] min-h-screen grid-rows-">
               <GeoHeader />
-              {children}
+              <section className="h-full col-span-full py-10">
+                <div className="h-full flex flex-col gap-10 w-container">
+                  {children}
+                </div>
+              </section>
             </main>
           </ThemeProvider>
         </QueryProvider>

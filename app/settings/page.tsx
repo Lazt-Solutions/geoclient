@@ -10,15 +10,11 @@ function Settings() {
 
     return (
         <PageState isLoading={isLoading} isError={isError || !profile} errorMessage="Failed to load profile">
-            <section className="col-span-full py-10">
-                <div className="grid gap-10 w-container">
-                    <div className="space-y-4">
-                        <h2 className="text-2xl font-semibold">Settings</h2>
-                        <p className="text-muted-foreground">Manage your account and application preferences</p>
-                    </div>
-                    {profile && <AccountInformation profile={profile} />}
-                </div>
-            </section>
+            <div className="space-y-4">
+                <h2 className="text-2xl font-semibold">Settings</h2>
+                <p className="text-muted-foreground">Manage your account and application preferences</p>
+            </div>
+            {profile && <AccountInformation profile={profile} />}
         </PageState>
     )
 }
