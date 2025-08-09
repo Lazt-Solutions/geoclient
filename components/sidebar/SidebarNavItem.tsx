@@ -1,4 +1,7 @@
+
 'use client'
+
+const LG_BREAKPOINT = 1024 // Tailwind's lg breakpoint
 
 import { cn } from '@/lib/utils'
 import { Icon } from '@tabler/icons-react'
@@ -32,7 +35,7 @@ export default function SidebarNavItem({
                     active && 'bg-primary hover:bg-primary/90'
                 )}
                 onClick={() => {
-                    if (typeof window !== 'undefined' && window.innerWidth < 1024) onClick?.()
+                    if (typeof window !== 'undefined' && window.innerWidth < LG_BREAKPOINT) onClick?.()
                 }}
             >
                 <div className="flex gap-4 items-center flex-1">

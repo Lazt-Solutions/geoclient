@@ -13,7 +13,6 @@ export default function Sidebar() {
 
     const handleGlobalEvents = useCallback((e: KeyboardEvent | UIEvent) => {
         if (e instanceof KeyboardEvent && e.key === 'Escape') setIsSidebarOpen(false)
-        // if (e instanceof UIEvent && window.innerWidth >= 1024) setIsSidebarOpen(false)
     }, [])
 
     useEffect(() => {
