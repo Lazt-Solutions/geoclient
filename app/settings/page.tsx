@@ -8,8 +8,6 @@ import { useProfile } from "@/hooks/useProfile"
 function Settings() {
     const { isLoading, data: profile, isError } = useProfile();
 
-    console.log({ profile, isLoading });
-
     return (
         <PageState isLoading={isLoading} isError={isError}>
             <section className="col-span-full py-10">
