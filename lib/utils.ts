@@ -16,7 +16,7 @@ export const geoActionVariants = {
         "bg-destructive text-white hover:bg-destructive/70 focus:ring-destructive/50 active:bg-destructive/80",
     outline:
         "bg-primary/10 border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary/50 active:bg-primary/90",
-    ghost: "bg-transparent text-foreground hover:bg-foreground/10  focus:ring-foreground/10 focus:ring-foreground/10",
+    ghost: "bg-transparent text-foreground hover:bg-foreground/10 focus:ring-foreground/10",
 };
 
 export type ActionVariant =

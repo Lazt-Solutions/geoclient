@@ -10,8 +10,6 @@ import { useRouter } from "next/navigation";
 export default function NotFoundPage() {
     const router = useRouter();
 
-    /* TODO: Implement a custom "go back" function that navigates client-side without causing a full page reload. */
-
     return (
         <section className="w-full max-w-md grid gap-10 text-center">
             <div>

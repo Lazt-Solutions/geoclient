@@ -12,7 +12,7 @@ function SettingsInfoItem({
             <label className="block text-sm font-medium text-muted-foreground">{label}</label>
             <div className="flex items-center gap-2 p-3 bg-card rounded-lg border border-muted text-muted-foreground">
                 {icon}
-                <span className="text-ellipsis overflow-hidden">{value}</span>
+                <span className="truncate">{value}</span>
             </div>
         </div>
     )

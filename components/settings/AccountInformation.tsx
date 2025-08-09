@@ -18,7 +18,7 @@ function AccountInformation({ profile }: Props) {
             <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <div className="flex-shrink-0">
                     <Image
-                        src={profile.image_url || "https://placehold.co/96x96?"}
+                        src={profile.image_url || "https://placehold.co/96x96"}
                         alt={`Profile picture of ${profile.display_name}`}
                         width={96}
                         height={96}

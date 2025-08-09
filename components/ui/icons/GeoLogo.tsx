@@ -1,13 +1,16 @@
 import { cn } from '@/lib/utils'
 
-function GeoLogo({ className = "" }) {
+type Props = {
+    className?: string
+}
+
+function GeoLogo({ className }: Props) {
     const baseClasses = "w-10 h-10"
 
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 543.75 600"
-            // fill="currentColor"
             className={cn(baseClasses, className)}
         >
             <defs>
