@@ -43,7 +43,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <main className="g-container grid-rows-[auto_1fr] min-h-screen grid-rows-">
+            <main className="g-container grid-rows-[auto_1fr] min-h-screen">
               <GeoHeader />
               <section className="h-full col-span-full py-10">
                 <div className="h-full flex flex-col gap-10 w-container">
