@@ -8,7 +8,7 @@ function SettingsInfoItem({
     value: string
 }) {
     return (
-        <div className='space-y-1x'>
+        <div className='space-y-1'>
             <label className="block text-sm font-medium text-muted-foreground">{label}</label>
             <div className="flex items-center gap-2 p-3 bg-card rounded-lg border border-muted text-muted-foreground">
                 {icon}
