@@ -2,7 +2,6 @@
 
 import { useProfile } from '@/hooks/useProfile';
 import { supabaseBrowser } from '@/lib/supabase/browser';
-import { Profile } from '@/types/profile.types';
 import { IconLogout2 } from '@tabler/icons-react';
 import { useQueryClient } from '@tanstack/react-query';
 import Image from 'next/image';
@@ -11,7 +10,7 @@ import { GeoButton } from '../ui/GeoButton';
 import GeoElementLoader from '../ui/GeoElementLoader';
 
 export default function SidebarFooter() {
-    const { data: profile, isLoading } = useProfile() as { data: Profile | null, isLoading: boolean };
+    const { data: profile, isLoading,  } = useProfile();
     const router = useRouter();
     const queryClient = useQueryClient();
 
