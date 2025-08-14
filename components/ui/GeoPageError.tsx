@@ -1,11 +1,11 @@
 import { IconAlertTriangleFilled, IconReload } from '@tabler/icons-react'
-import { GeoActionLink } from './ui/GeoActionLink'
+import { GeoActionLink } from './GeoActionLink'
 
 type Props = {
     message?: string
 }
 
-function PageError({ message = "We're having trouble connecting to our servers. Please check your internet connection and try again." }: Props) {
+function GeoPageError({ message = "We're having trouble connecting to our servers. Please check your internet connection and try again." }: Props) {
     return (
         <section className="col-span-full py-10">
             <div className="grid gap-6 justify-items-center w-container">
@@ -19,15 +19,15 @@ function PageError({ message = "We're having trouble connecting to our servers. 
                         {message}
                     </p>
                 </div>
-                    <GeoActionLink
-                        variant='destructive'
-                        href='/'
-                    >
-                        <IconReload /> Go back to dashboard
-                    </GeoActionLink>
+                <GeoActionLink
+                    variant='destructive'
+                    href='/'
+                >
+                    <IconReload /> Go back to dashboard
+                </GeoActionLink>
             </div>
         </section>
     )
 }
 
-export default PageError
+export default GeoPageError

@@ -1,4 +1,4 @@
-import GeoElementLoader from './ui/GeoElementLoader'
+import GeoElementLoader from './GeoElementLoader'
 
 type Props = {
     message?: string
