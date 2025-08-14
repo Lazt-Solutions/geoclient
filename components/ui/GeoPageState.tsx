@@ -1,6 +1,6 @@
 import React from 'react'
-import PageLoader from './PageLoader'
-import PageError from './PageError'
+import GeoPageError from './GeoPageError'
+import PageLoader from './GeoPageLoader'
 
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
     children: React.ReactNode
 }
 
-function PageState({ loadingMessage, errorMessage, isLoading, isError, children }: Props) {
+function GeoPageState({ loadingMessage, errorMessage, isLoading, isError, children }: Props) {
 
     if (isLoading) {
         return (
@@ -21,7 +21,7 @@ function PageState({ loadingMessage, errorMessage, isLoading, isError, children 
 
     if (isError) {
         return (
-            <PageError message={errorMessage} />
+            <GeoPageError message={errorMessage} />
         );
     }
 
@@ -32,4 +32,4 @@ function PageState({ loadingMessage, errorMessage, isLoading, isError, children 
     )
 }
 
-export default PageState
+export default GeoPageState
