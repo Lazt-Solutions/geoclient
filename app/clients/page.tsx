@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { GeoHeader } from "@/components/ui/GeoHeader";
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase/client";
+// import { GeoHeader } from "@/components/ui/GeoHeader";
 import GeoInfoCard from "@/components/ui/GeoInfoCard";
 // import GeoButton from "@/components/ui/GeoButton";
 import ClientList from "@/components/client/ClientList";
@@ -10,31 +11,37 @@ import ClientFooter from "@/components/client/ClientFooter"
 import { Client } from "@/components/client/ClientCard";
 
 export default function ClientsPage() {
+  const [clients, setClients] = useState<Client[]>([]);
   const [selectedClient, setSelectedClient] = useState<Client | null>(null);
 
-  const clients: Client[] = [
-    {
-      id: "1",
-      name: "Sarah Johnson",
-      status: "Active",
-      phone: "(555) 123-4567",
-      email: "sarah.johnson@email.com",
-      addresses: ["123 Main Street, New York, NY 10001", "456 Business Ave, New York, NY 10002"],
-      tags: ["VIP Client", "Enterprise", "High Priority"],
-      notes: ["Initial meeting went very well.", "Client referred by John Smith."]
-    },
-    {
-      id: "2",
-      name: "Michael Chen",
-      status: "Pending",
-      phone: "(555) 987-6543",
-      email: "michael.chen@techcorp.com",
-      addresses: ["789 Tech Plaza, San Francisco, CA 94105"],
-      tags: ["Tech Startup", "Follow-up Required"],
-      notes: ["Needs approval from board. Scheduled follow-up call."]
-    }
-    // more clients...
-  ];
+  useEffect(() => {
+    const fetchClients = async () => {
+      const { data, error } = await supabase
+        .from("clients")
+        .select(`
+          id, name, email, phone, status, created_at, updated_at,
+          client_tags (
+            tags ( name )
+          ),
+          client_notes (
+            id, content, created_at
+          )
+        `);
+
+      console.log("Supabase data:", data);
+      if (error) {
+        console.error("Error fetching clients: ", error);
+      } else {
+        const mapped = data.map((c: any) => ({
+          ...c,
+          tags: c.client_tags?.map((t: any) => t.tags.name) || [],
+          notes: c.client_notes || []
+        }));
+        setClients(mapped);
+      }
+    };
+    fetchClients();
+  }, []);
 
   return (
     <div className="bg-background min-h-screen">
@@ -42,7 +49,7 @@ export default function ClientsPage() {
         {/* Stats Row */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <GeoInfoCard title="Active" description="Currently working with">
-            <span className="text-2xl font-bold text-green-600">8</span>
+            <span className="text-2xl font-bold text-green-600">{clients.length}</span>
           </GeoInfoCard>
           <GeoInfoCard title="Pending" description="Awaiting approval">
             <span className="text-2xl font-bold text-yellow-600">3</span>

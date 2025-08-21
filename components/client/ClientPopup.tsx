@@ -50,10 +50,13 @@ export default function ClientPopup({ client, onClose }: ClientPopupProps) {
           {/* Tags */}
           {client.tags?.length > 0 && (
             <section>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Tags</h4>
+              <h4 className="text-lg font-semibold">Tags</h4>
               <div className="flex flex-wrap gap-2">
                 {client.tags.map((tag, i) => (
-                  <span key={i} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                  <span
+                    key={i}
+                    className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
+                  >
                     {tag}
                   </span>
                 ))}
@@ -61,19 +64,20 @@ export default function ClientPopup({ client, onClose }: ClientPopupProps) {
             </section>
           )}
 
-          {/* Notes */}
           {client.notes?.length > 0 && (
             <section>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Notes</h4>
-              <div className="p-6 space-y-6 text-gray-900">
-                {client.notes.map((note, i) => (
-                  <div key={i} className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg mb-2">
-                    {note}
-                  </div>
-                ))}
-              </div>
+              <h4 className="text-lg font-semibold">Notes</h4>
+              {client.notes.map((note) => (
+                <div
+                  key={note.id}
+                  className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg mb-2"
+                >
+                  {note.content}
+                </div>
+              ))}
             </section>
           )}
+
         </div>
       </div>
     </div>
