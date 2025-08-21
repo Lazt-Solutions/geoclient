@@ -26,20 +26,24 @@ export default function ClientPopup({ client, onClose }: ClientPopupProps) {
           {/* Contact Info */}
           <section>
             <h4 className="text-lg font-semibold text-gray-900 mb-3">Contact Information</h4>
-            <p>Email: {client.email}</p>
-            <p>Phone: {client.phone}</p>
-            <p>Status: {client.status}</p>
+            <div className="p-6 space-y-6 text-gray-900">
+              <p>Email: {client.email}</p>
+              <p>Phone: {client.phone}</p>
+              <p>Status: {client.status}</p>
+            </div>
           </section>
 
           {/* Addresses */}
           {client.addresses?.length > 0 && (
             <section>
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Addresses</h4>
-              {client.addresses.map((addr, i) => (
-                <div key={i} className="bg-gray-50 p-3 rounded-lg mb-2">
-                  {addr}
-                </div>
-              ))}
+              <div className="p-6 space-y-6 text-gray-900">
+                {client.addresses.map((addr, i) => (
+                  <div key={i} className="bg-gray-50 p-3 rounded-lg mb-2">
+                    {addr}
+                  </div>
+                ))}
+              </div>
             </section>
           )}
 
@@ -61,11 +65,13 @@ export default function ClientPopup({ client, onClose }: ClientPopupProps) {
           {client.notes?.length > 0 && (
             <section>
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Notes</h4>
-              {client.notes.map((note, i) => (
-                <div key={i} className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg mb-2">
-                  {note}
-                </div>
-              ))}
+              <div className="p-6 space-y-6 text-gray-900">
+                {client.notes.map((note, i) => (
+                  <div key={i} className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg mb-2">
+                    {note}
+                  </div>
+                ))}
+              </div>
             </section>
           )}
         </div>

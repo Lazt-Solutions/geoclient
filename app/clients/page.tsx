@@ -6,6 +6,7 @@ import GeoInfoCard from "@/components/ui/GeoInfoCard";
 // import GeoButton from "@/components/ui/GeoButton";
 import ClientList from "@/components/client/ClientList";
 import ClientPopup from "@/components/client/ClientPopup";
+import ClientFooter from "@/components/client/ClientFooter"
 import { Client } from "@/components/client/ClientCard";
 
 export default function ClientsPage() {
@@ -36,10 +37,7 @@ export default function ClientsPage() {
   ];
 
   return (
-    <div className="bg-gray-50 min-h-screen">
-      {/* Top App Header */}
-      {/* <GeoHeader /> */}
-
+    <div className="bg-background min-h-screen">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
         {/* Stats Row */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -60,6 +58,7 @@ export default function ClientsPage() {
 
       {/* Popup */}
       <ClientPopup client={selectedClient} onClose={() => setSelectedClient(null)} />
+    <ClientFooter />
     </div>
   );
 }
