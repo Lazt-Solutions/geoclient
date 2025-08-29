@@ -7,13 +7,185 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instanciate createClient with right options
+  // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "12.2.12 (cd3cf9e)"
   }
   public: {
     Tables: {
+      client_addresses: {
+        Row: {
+          city: string | null
+          client_id: string | null
+          country: string | null
+          created_at: string | null
+          id: string
+          label: string | null
+          latitude: number | null
+          longitude: number | null
+          postal_code: string | null
+          state: string | null
+          street: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          city?: string | null
+          client_id?: string | null
+          country?: string | null
+          created_at?: string | null
+          id?: string
+          label?: string | null
+          latitude?: number | null
+          longitude?: number | null
+          postal_code?: string | null
+          state?: string | null
+          street?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          city?: string | null
+          client_id?: string | null
+          country?: string | null
+          created_at?: string | null
+          id?: string
+          label?: string | null
+          latitude?: number | null
+          longitude?: number | null
+          postal_code?: string | null
+          state?: string | null
+          street?: string | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "client_addresses_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "clients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      client_notes: {
+        Row: {
+          author_id: string | null
+          client_id: string | null
+          content: string
+          created_at: string | null
+          id: string
+          updated_at: string | null
+        }
+        Insert: {
+          author_id?: string | null
+          client_id?: string | null
+          content: string
+          created_at?: string | null
+          id?: string
+          updated_at?: string | null
+        }
+        Update: {
+          author_id?: string | null
+          client_id?: string | null
+          content?: string
+          created_at?: string | null
+          id?: string
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "client_notes_author_id_fkey"
+            columns: ["author_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "client_notes_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "clients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      client_tags: {
+        Row: {
+          client_id: string
+          created_at: string | null
+          tag_id: string
+          updated_at: string | null
+        }
+        Insert: {
+          client_id: string
+          created_at?: string | null
+          tag_id: string
+          updated_at?: string | null
+        }
+        Update: {
+          client_id?: string
+          created_at?: string | null
+          tag_id?: string
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "client_tags_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "clients"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "client_tags_tag_id_fkey"
+            columns: ["tag_id"]
+            isOneToOne: false
+            referencedRelation: "tags"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      clients: {
+        Row: {
+          created_at: string | null
+          email: string | null
+          id: string
+          name: string
+          phone: string | null
+          status: string | null
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          email?: string | null
+          id?: string
+          name: string
+          phone?: string | null
+          status?: string | null
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          email?: string | null
+          id?: string
+          name?: string
+          phone?: string | null
+          status?: string | null
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "clients_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           created_at: string
@@ -55,6 +227,86 @@ export type Database = {
           id?: string
         }
         Relationships: []
+      }
+      tags: {
+        Row: {
+          created_at: string | null
+          id: string
+          name: string
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          name: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          name?: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tags_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      visits: {
+        Row: {
+          client_id: string | null
+          completed_at: string | null
+          created_at: string | null
+          id: string
+          notes: string | null
+          scheduled_at: string
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          client_id?: string | null
+          completed_at?: string | null
+          created_at?: string | null
+          id?: string
+          notes?: string | null
+          scheduled_at: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          client_id?: string | null
+          completed_at?: string | null
+          created_at?: string | null
+          id?: string
+          notes?: string | null
+          scheduled_at?: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "visits_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "clients"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "visits_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {

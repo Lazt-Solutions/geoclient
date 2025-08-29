@@ -1,5 +1,5 @@
 import { supabaseBrowser } from "@/lib/supabase/browser";
-import { Profile } from "@/types/profile.types";
+import { Profile } from "@/lib/types/profile.types";
 import { useQuery } from "@tanstack/react-query";
 
 const fetchProfile = async () => {

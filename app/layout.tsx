@@ -45,8 +45,8 @@ export default function RootLayout({
           >
             <main className="g-container grid-rows-[auto_1fr] min-h-screen">
               <GeoHeader />
-              <section className="h-full col-span-full py-10">
-                <div className="h-full flex flex-col gap-10 w-container">
+              <section className="col-span-full py-10">
+                <div className="min-h-full flex flex-col gap-10 w-container">
                   {children}
                 </div>
               </section>
