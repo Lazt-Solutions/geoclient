@@ -1,9 +1,9 @@
 "use client"
 
-import DashboardCard from '@/components/dashboard/DashboardCard';
-import QuickActionFeed from '@/components/dashboard/QuickActionFeed';
-import StatCard from '@/components/dashboard/StatCard';
-import GeoPageState from '@/components/ui/GeoPageState';
+import DashboardCard from '@/components/dashboard/dashboard-card';
+import QuickActionFeed from '@/components/dashboard/quick-action-feed';
+import StatCard from '@/components/dashboard/stat-card';
+import GeoPageState from '@/components/ui/geo-page-state';
 import { useListClients } from '@/hooks/clients/useListClients';
 import { useProfile } from '@/hooks/users/useProfile';
 import { useVisitsByStatus } from '@/hooks/visits/useVisitsByStatus';

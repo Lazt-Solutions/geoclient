@@ -1,8 +1,9 @@
 'use client'
 
-import Sidebar from '../sidebar/Sidebar'
-import { GeoActionLink } from './GeoActionLink'
-import GeoLogo from './icons/GeoLogo'
+import Sidebar from "../sidebar/sidebar"
+import { GeoActionLink } from "./geo-action-link"
+import GeoLogo from "./icons/geo-logo"
+
 
 export function GeoHeader() {
     return (

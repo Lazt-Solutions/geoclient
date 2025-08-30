@@ -1,5 +1,5 @@
 import { Visit } from "@/lib/types/visit.types";
-import GeoBadge from "../ui/GeoBadge";
+import GeoBadge from "../ui/geo-badge";
 
 function VisitStatusBadge({ visit }: { visit: Visit }) {
     const scheduledDate = new Date(visit.scheduled_at);

@@ -1,5 +1,5 @@
 import { IconCalendarClock, IconPlus } from '@tabler/icons-react'
-import { GeoButton } from '../ui/GeoButton'
+import { GeoButton } from '../ui/geo-button'
 
 function QuickActionFeed() {
     return (

@@ -1,10 +1,10 @@
-import GeoElementLoader from './GeoElementLoader'
+import GeoElementLoader from "./geo-element-loader"
 
 type Props = {
     message?: string
 }
 
-function PageLoader({ message = "Please wait while we fetch the data..." }: Props) {
+function GeoPageLoader({ message = "Please wait while we fetch the data..." }: Props) {
     return (
         <section className="col-span-full py-10">
             <div className="grid gap-6 w-container text-center">
@@ -21,4 +21,4 @@ function PageLoader({ message = "Please wait while we fetch the data..." }: Prop
     )
 }
 
-export default PageLoader
+export default GeoPageLoader

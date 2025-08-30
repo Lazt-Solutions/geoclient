@@ -1,4 +1,4 @@
-import { GeoTextLink } from '@/components/ui/GeoTextLink'
+import { GeoTextLink } from "../ui/geo-text-link";
 
 export function AuthFooter() {
     return (

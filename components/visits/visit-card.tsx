@@ -1,8 +1,8 @@
 import { formatRelativeDate } from "@/lib/utils/format-relative-date";
-import VisitActionMenu from "./VisitActionMenu";
-import VisitStatusBadge from "./VisitStatusBadge";
 import { Visit } from "@/lib/types/visit.types";
 import { Client } from "@/lib/types/client.types";
+import VisitStatusBadge from "./visit-status-badge";
+import VisitActionMenu from "./visit-action-menu";
 
 interface Props {
     visit: Visit;

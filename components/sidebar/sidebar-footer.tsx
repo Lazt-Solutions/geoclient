@@ -6,8 +6,8 @@ import { IconLogout2 } from '@tabler/icons-react';
 import { useQueryClient } from '@tanstack/react-query';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { GeoButton } from '../ui/GeoButton';
-import GeoElementLoader from '../ui/GeoElementLoader';
+import GeoElementLoader from '../ui/geo-element-loader';
+import { GeoButton } from '../ui/geo-button';
 
 export default function SidebarFooter() {
     const { data: profile, isLoading, } = useProfile();

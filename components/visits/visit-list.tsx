@@ -1,5 +1,5 @@
 import { VisitWithClient } from '@/lib/types/visit.types';
-import VisitCard from './VisitCard';
+import VisitCard from './visit-card';
 
 interface Props {
     visits: VisitWithClient[];

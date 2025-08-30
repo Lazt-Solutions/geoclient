@@ -1,10 +1,10 @@
 "use client"
 
-import { GeoButton } from '@/components/ui/GeoButton';
-import GeoPageState from '@/components/ui/GeoPageState';
-import VisitList from '@/components/visits/VisitList';
-import VisitsEmpty from '@/components/visits/VisitsEmpty';
-import VisitsFilterBar from '@/components/visits/VisitsFilterBar';
+import { GeoButton } from '@/components/ui/geo-button';
+import GeoPageState from '@/components/ui/geo-page-state';
+import VisitList from '@/components/visits/visit-list';
+import VisitsEmpty from '@/components/visits/visits-empty';
+import VisitsFilterBar from '@/components/visits/visits-filter-bar';
 import useSearch from '@/hooks/utils/useSearch';
 import { useVisitsByStatus } from '@/hooks/visits/useVisitsByStatus';
 import { VisitFilterStatus } from '@/lib/types/visit.types';

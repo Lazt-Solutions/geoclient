@@ -1,8 +1,8 @@
 'use client'
 
 import { IconX } from '@tabler/icons-react'
-import { GeoButton } from '../ui/GeoButton'
-import GeoLogo from '../ui/icons/GeoLogo'
+import GeoLogo from '../ui/icons/geo-logo'
+import { GeoButton } from '../ui/geo-button'
 
 type Props = {
     onClose: () => void
