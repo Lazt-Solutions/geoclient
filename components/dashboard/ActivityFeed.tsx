@@ -1,5 +1,5 @@
 import { IconCheck } from '@tabler/icons-react';
-import ActivityItem from './activity-item';
+import ActivityItem from './ActivityItem';
 
 const activities = [
     {

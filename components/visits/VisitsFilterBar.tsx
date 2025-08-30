@@ -1,7 +1,7 @@
 import { VisitFilterStatus } from '@/lib/types/visit.types';
 import { IconSearch } from '@tabler/icons-react';
-import { GeoInput } from '../ui/geo-input';
-import { GeoSelect } from '../ui/geo-select';
+import { GeoInput } from '../ui/GeoInput';
+import { GeoSelect } from '../ui/GeoSelect';
 
 type Props = {
     searchTerm: string;

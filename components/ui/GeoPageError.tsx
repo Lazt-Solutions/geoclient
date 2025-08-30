@@ -1,5 +1,5 @@
 import { IconAlertTriangleFilled, IconReload } from '@tabler/icons-react'
-import { GeoActionLink } from './geo-action-link'
+import { GeoActionLink } from './GeoActionLink'
 
 type Props = {
     message?: string

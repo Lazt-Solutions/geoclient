@@ -1,6 +1,7 @@
-import { AuthCard } from "@/components/auth/auth-card"
-import { AuthFooter } from "@/components/auth/auth-footer"
-import { AuthHeader } from "@/components/auth/auth-header"
+import { AuthCard } from '@/components/auth/AuthCard'
+import { AuthFooter } from '@/components/auth/AuthFooter'
+import { AuthHeader } from '@/components/auth/AuthHeader'
+
 
 function AuthPage() {
     return (

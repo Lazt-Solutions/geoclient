@@ -1,4 +1,4 @@
-import GeoLogo from "../ui/icons/geo-logo";
+import GeoLogo from "@/components/ui/icons/GeoLogo";
 
 export function AuthHeader() {
     return (

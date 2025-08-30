@@ -1,9 +1,9 @@
 "use client";
 
-import { GeoActionLink } from "@/components/ui/geo-action-link";
-import { GeoButton } from "@/components/ui/geo-button";
-import { GeoTextLink } from "@/components/ui/geo-text-link";
-import GeoLogo from "@/components/ui/icons/geo-logo";
+import { GeoActionLink } from "@/components/ui/GeoActionLink";
+import { GeoButton } from "@/components/ui/GeoButton";
+import { GeoTextLink } from "@/components/ui/GeoTextLink";
+import GeoLogo from "@/components/ui/icons/GeoLogo";
 import { IconArrowLeft, IconHome } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import GeoPageLoader from './geo-page-loader'
-import GeoPageError from './geo-page-error'
+import GeoPageError from './GeoPageError'
+import GeoPageLoader from './GeoPageLoader'
 
 
 type Props = {

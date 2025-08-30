@@ -1,11 +1,11 @@
 "use client"
+import { GeoButton } from '@/components/ui/GeoButton'
+import { GeoTextLink } from '@/components/ui/GeoTextLink'
 import { supabaseBrowser } from '@/lib/supabase/browser'
 import {
     IconBrandGithubFilled,
     IconBrandGoogleFilled,
 } from '@tabler/icons-react'
-import { GeoButton } from '../ui/geo-button'
-import { GeoTextLink } from '../ui/geo-text-link'
 
 type AuthProvider = "github" | "google"
 

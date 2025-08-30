@@ -9,7 +9,7 @@ import {
     IconUsers
 } from '@tabler/icons-react';
 import { usePathname } from 'next/navigation';
-import SidebarNavItem from './sidebar-nav-item';
+import SidebarNavItem from './SidebarNavItem';
 
 const navItems = [
     { href: '/dashboard', label: 'Dashboard', icon: IconCompassFilled },
