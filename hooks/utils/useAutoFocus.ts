@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 
-export default function useAutoFocus() {
-    const ref = useRef(null);
+export function useAutoFocus<
+    T extends HTMLInputElement | HTMLTextAreaElement = HTMLInputElement
+>() {
+    const ref = useRef<T>(null);
 
     useEffect(() => {
         if (ref.current) {

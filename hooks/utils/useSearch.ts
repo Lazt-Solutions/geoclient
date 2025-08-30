@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import useDebounce from "./useDebounce";
-
+import { useDebounce } from "./useDebounce";
 
 function useSearch(delay: number = 500) {
     const [searchTerm, setSearchTerm] = useState<string>("");
@@ -18,7 +17,7 @@ function useSearch(delay: number = 500) {
     }, []);
 
     // Configurable debounce for the search term
-    const debouncedSearchTerm = useDebounce(searchTerm, delay);
+    const debouncedSearchTerm = useDebounce<string>(searchTerm, delay);
 
     // Reset isSearching when the debounced search term updates
     useEffect(() => {
