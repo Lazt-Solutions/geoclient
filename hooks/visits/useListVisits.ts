@@ -12,7 +12,8 @@ const fetchAllVisits = async () => {
     const { data: visits, error: visitsError } = await supabase
         .from("visits")
         .select("*, client:clients(*)")
-        .eq("user_id", user.id);
+        .eq("user_id", user.id)
+        .order("scheduled_at", { ascending: true });
 
     if (visitsError) {
         throw new Error(visitsError.message);

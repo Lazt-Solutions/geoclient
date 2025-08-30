@@ -41,7 +41,7 @@ function Visits() {
             <header className="grid gap-6 sm:grid-cols-[1fr_auto] items-center">
                 <div className="space-y-4">
                     <h2 className="text-2xl font-semibold">
-                        Schedule Visits ({currentVisits.length})
+                        Schedule Visits ({all.length})
                     </h2>
                     <p className="text-muted-foreground">
                         Manage your client visits and appointments
