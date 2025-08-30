@@ -1,6 +1,6 @@
 'use client'
 
-import { useProfile } from '@/hooks/useProfile';
+import { useProfile } from '@/hooks/users/useProfile';
 import { supabaseBrowser } from '@/lib/supabase/browser';
 import { IconLogout2 } from '@tabler/icons-react';
 import { useQueryClient } from '@tanstack/react-query';
@@ -10,7 +10,7 @@ import { GeoButton } from '../ui/GeoButton';
 import GeoElementLoader from '../ui/GeoElementLoader';
 
 export default function SidebarFooter() {
-    const { data: profile, isLoading,  } = useProfile();
+    const { data: profile, isLoading, } = useProfile();
     const router = useRouter();
     const queryClient = useQueryClient();
 

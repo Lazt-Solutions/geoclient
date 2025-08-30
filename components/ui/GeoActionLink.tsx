@@ -2,7 +2,7 @@
 
 import { ActionSizes, ActionVariant } from "@/lib/types/action.types";
 import { cn } from "@/lib/utils/cn";
-import { geoActionBase } from "@/lib/utils/geoActionBase";
+import { geoActionBase } from "@/lib/utils/geo-base-styles";
 import Link from "next/link";
 import { MouseEvent } from "react";
 

@@ -1,11 +1,11 @@
 "use client"
 
-import { ActionSizes, ActionTypes, ActionVariant } from "@/lib/types/action.types";
+import { ActionSizes, ActionVariant, ButtonTypes } from "@/lib/types/action.types";
 import { cn } from "@/lib/utils/cn";
-import { geoActionBase } from "@/lib/utils/geoActionBase";
+import { geoActionBase } from "@/lib/utils/geo-base-styles";
 
 type Props = {
-    type?: ActionTypes;
+    type?: ButtonTypes;
     hidden?: boolean;
     children: React.ReactNode;
     variant?: ActionVariant;

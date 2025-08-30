@@ -30,7 +30,7 @@ export default function SidebarNavItem({
                 size="md"
                 className={cn(
                     'w-full',
-                    active && 'bg-primary hover:bg-primary/90'
+                    active && 'bg-primary hover:bg-primary/90 text-white'
                 )}
                 onClick={onClick}
             >
@@ -39,7 +39,7 @@ export default function SidebarNavItem({
                     {label}
                 </div>
                 {badge && (
-                    <span className="ml-auto text-xs font-medium bg-primary rounded-full px-2 py-0.5">
+                    <span className="ml-auto text-xs font-medium bg-primary text-white rounded-full px-2 py-0.5">
                         {badge}
                     </span>
                 )}

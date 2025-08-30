@@ -14,4 +14,12 @@ export type ActionSizes =
     | "icon-md"
     | "icon-lg";
 
-export type ActionTypes = "button" | "submit" | "reset";
+export type ButtonTypes = "button" | "submit" | "reset";
+
+export type InputTypes =
+    | "text"
+    | "email"
+    | "password"
+    | "search"
+    | "tel"
+    | "url";

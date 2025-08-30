@@ -13,7 +13,7 @@ export function GeoHeader() {
                     size='icon-md'
                     href="/dashboard"
                 >
-                    <GeoLogo className="fill-primary text-primary-foreground w-8 h-8" />
+                    <GeoLogo className="fill-primary text-white w-8 h-8" />
                 </GeoActionLink>
                 <Sidebar />
             </div>

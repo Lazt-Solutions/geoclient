@@ -1,8 +1,8 @@
 "use client"
 
-import GeoPageState from "@/components/ui/GeoPageState";
 import AccountInformation from "@/components/settings/AccountInformation";
-import { useProfile } from "@/hooks/useProfile";
+import GeoPageState from "@/components/ui/GeoPageState";
+import { useProfile } from "@/hooks/users/useProfile";
 
 
 function SettingsPage() {

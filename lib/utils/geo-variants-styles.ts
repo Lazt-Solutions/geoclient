@@ -10,3 +10,12 @@ export const geoActionVariants = {
         "bg-primary/10 border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary/50 active:bg-primary/90",
     ghost: "bg-transparent text-foreground hover:bg-foreground/10 focus:ring-foreground/10",
 };
+
+export const geoBadgeVariants = {
+    primary: "bg-green-200 text-primary",
+    secondary: "bg-blue-200 text-secondary",
+    destructive: "bg-red-200 text-destructive",
+    subtle: "bg-gray-200 text-gray-700",
+    outline: "border-2 border-primary text-primary",
+    ghost: "bg-transparent text-foreground",
+};
