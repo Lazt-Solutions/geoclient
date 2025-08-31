@@ -1,7 +1,7 @@
 import { IconCheck, IconDotsVertical, IconEdit, IconTrashFilled } from "@tabler/icons-react";
 import { GeoButton } from "../ui/GeoButton";
 import { useState } from "react";
-import useClickOutside from "@/hooks/utils/useClickOutside";
+import { useClickOutside } from "@/hooks/utils/useClickOutside";
 
 type Props = {
     onEdit?: () => void;
